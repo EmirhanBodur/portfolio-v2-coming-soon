@@ -5,7 +5,7 @@ Bu proje, Emirhan Bodur'un yeni portfolyo web sitesinin duyurusu için hazırlan
 ## ✨ Özellikler
 
 - 🎬 Terminal animasyonu (yazı yazma efekti)
-- ⏱️ Geri sayım sayacı (15 günlük süre)
+- ⏱️ Geri sayım sayacı (30 günlük süre)
 - 📱 Sosyal medya bağlantıları (Instagram, Twitter/X, LinkedIn)
 - 🎨 Modern ve responsive tasarım (mobil uyumlu)
 - ⚡ Vite ile hızlı geliştirme deneyimi
