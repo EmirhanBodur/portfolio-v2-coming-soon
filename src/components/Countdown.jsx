@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const Countdown = ({ targetDays = 30 }) => {
+const Countdown = () => {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -8,13 +8,13 @@ const Countdown = ({ targetDays = 30 }) => {
     seconds: 0,
   });
 
-  useEffect(() => {
-    const target = new Date();
-    target.setDate(target.getDate() + targetDays);
+  // 🎯 Hedef: 1 Temmuz 2025 saat 10:00 (yerel saat)
+  const targetDate = new Date("2025-06-24T10:00:00");
 
+  useEffect(() => {
     const updateCountdown = () => {
       const now = new Date().getTime();
-      const distance = target - now;
+      const distance = targetDate.getTime() - now;
 
       const totalSeconds = Math.floor(distance / 1000);
 
@@ -31,11 +31,11 @@ const Countdown = ({ targetDays = 30 }) => {
       });
     };
 
-    updateCountdown(); // 🧠 İlk açılışta doğru süreyi göster
+    updateCountdown(); // ilk çalıştırma
     const interval = setInterval(updateCountdown, 1000);
 
     return () => clearInterval(interval);
-  }, [targetDays]);
+  }, []);
 
   return (
     <div className="flex justify-center space-x-4 mb-8">
